@@ -1,32 +1,31 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar dense app>
+      <v-spacer />
+      <span> Fraudulent Credit Card Transaction Detector </span>
+      <v-spacer />
+    </v-app-bar>
+
+    <v-content app> </v-content>
+
+    <v-footer app> 
+      <div> &copy; {{new Date().getFullYear()}} </div>
+      <v-spacer/>
+      <div> 
+        Made with <v-icon color="red"> mdi-heart </v-icon> by 
+        <a href="http://bitbeast.me/" target="_blank"> bitbeast </a>  
+      </div>
+
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style scoped>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
+a {
+  text-decoration: none;
   font-weight: bold;
-  color: #2c3e50;
+  color: #000000!important;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
